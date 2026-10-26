@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mpesa-bridge-config
+  namespace: fintech
+data:
+  SPRING_PROFILES_ACTIVE: "prod"
+  SERVER_PORT: "8080"
+  FINTECH_SOAP_CORE_BANKING_ENDPOINT: "https://cbs.internal.bank/ws/corebanking"
+  JWT_EXPIRATION_MS: "86400000"
